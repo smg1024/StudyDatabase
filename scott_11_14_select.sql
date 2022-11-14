@@ -10,7 +10,7 @@ ename 사원명, sal, sal*0.1 bonus
 FROM emp;
 
 -- 테이블 구조 확인
-desc emp;
+--desc emp;
 
 -- where절 : 조건에 맞는 레코드 선택하기
 --          from절 다음에 where절이 있다
