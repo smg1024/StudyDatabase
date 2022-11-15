@@ -97,9 +97,9 @@ select ename, sal from emp order by sal desc;
 select ename, job, sal from emp order by job asc, sal asc;
 
 -- [문제] 81년도에 입사한 사원을 부서별 급여순으로 정렬하라
-select * from emp where hiredate like '1981%' order by deptno asc, sal asc;
+select * from emp where hiredate like '81%' order by deptno asc, sal asc;
 
-
+select * from dba_users;
 
 
 
