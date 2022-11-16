@@ -82,18 +82,17 @@ update emp set comm=sal*0.1 where nvl(comm,0)=0;
 
 -- DELETE -> 레코드를 전체 또는 일부 삭제하기
 -- [문제] comm이 $200 미만인 레코드를 삭제하라
+delete from emp where comm<200;
 
 
 
 
 
-
-
+select * from emp;
 select * from emp5;
 select * from emp4;
 select * from emp3;
 select * from emp2;
 select * from dept;
 select * from dba_users;
-select * from emp;
 select * from dual;
