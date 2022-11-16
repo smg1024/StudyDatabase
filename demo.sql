@@ -85,4 +85,3 @@ INSERT INTO DUMMY VALUES (0);
 
 COMMIT;
 
---@ /Users/poby/StudyDatabase/scott_11_14_select.sql;
