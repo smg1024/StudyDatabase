@@ -21,6 +21,7 @@ alter table emp modify (job varchar2(5)); -- ERROR : 5글자보다 많은 job이
 -- DROP -> 칼럼 삭제
 alter table emp drop column mgr;
 
+--======================================================================
 
 -- 테이블 생성
 -- 필드명, 테이터타입(자리수), NULL허용여부, 중복여부

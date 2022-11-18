@@ -1,0 +1,48 @@
+CREATE TABLE book_tbl(
+	isbn NUMBER(13) PRIMARY KEY,
+	title VARCHAR2(100) NOT NULL,
+	price NUMBER(10,2) NOT NULL,
+	genre VARCHAR2(20) NULL,
+	pub_date DATE,
+	pages NUMBER(4),
+	author_code NUMBER(5) NOT NULL,
+	pub_code NUMBER(5) NOT NULL,
+	reg_date DATE DEFAULT SYSDATE
+);
+
+CREATE TABLE pub_tbl(
+	pub_code NUMBER(5) PRIMARY KEY,
+	pub_tel NUMBER(11),
+	pub_email VARCHAR2(50),
+	pub_rep VARCHAR2(30),
+	publisher VARCHAR2(30) NOT NULL,
+	reg_date DATE DEFAULT SYSDATE
+);
+
+CREATE TABLE author_tbl(
+	author_code NUMBER(5) PRIMARY KEY,
+	author VARCHAR2(30) NOT NULL,
+	auth_email VARCHAR2(50),
+	debut VARCHAR2(100),
+	debut_year NUMBER(4),
+	reg_date DATE DEFAULT SYSDATE
+);
+
+SELECT * FROM book_tbl;
+SELECT * FROM pub_tbl;
+SELECT * FROM author_tbl;
+
+
+
+
+CREATE SEQUENCE literature
+	MINVALUE 1 MAXVALUE 100;
+CREATE SEQUENCE novel
+	MINVALUE 101 MAXVALUE 200;
+CREATE SEQUENCE sciencefiction
+	MINVALUE 201 MAXVALUE 300;
+CREATE SEQUENCE history
+	MINVALUE 301 MAXVALUE 400;
+
+SELECT * FROM user_SEQUENCEs;
+
