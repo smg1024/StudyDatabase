@@ -9,7 +9,7 @@ select * from emp;
 -- ADD -> 칼럼 추가
 -- emp 테이블에 문자 15자리를 저장할 수 있는 tel칼럼를 추가하라
 -- not null : 반드시 데이터가 있어야 함
--- null -> 데이터가 없어도 칼럼가 생성됨
+-- null -> 데이터가 없어도 칼럼생성됨
 alter table emp add (tel varchar2(15));
 
 -- MODIFY -> 칼럼 수정
@@ -38,7 +38,7 @@ create table member(
 	phone varchar2(15) not null,
 	email varchar2(50),
 	addr varchar2(300),
-	regdate date default sysdate		-- 값을 설정하지 않으면 자동으로 sysdate로 생성
+	regdate date default sysdate	-- 값을 설정하지 않으면 자동으로 sysdate로 생성
 );
 
 -- SEQUENCE -> 자동으로 규칙적인 테이터를 생성해주는 객체

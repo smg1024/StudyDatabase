@@ -9,8 +9,7 @@ order by sal desc;
 
 
 -- CUBE() -> 1차 분류 또는 2차 분류에 대하여 통계를 구해주기
--- [문제]부서별 업무에 대한 사원수 급여의 합계
-select deptno, job, count(empno) "사원 수", sum(sal) "급여의 합계" from emp
+-- [문제]부서별 업무에 대한 사원수 급여의 합select deptno, job, count(empno) "사원 수", sum(sal) "급여의 합계" from emp
 group by cube(deptno, job) order by deptno;
 
 -- GROUPING() -> GROUP BY로 통계가 계산된 경우는 0

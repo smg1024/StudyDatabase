@@ -24,7 +24,7 @@ CREATE TABLE author_tbl(
 	author VARCHAR2(30) NOT NULL,
 	auth_email VARCHAR2(50),
 	debut VARCHAR2(100),
-	debut_year NUMBER(4),
+	debut_year DATE,
 	reg_date DATE DEFAULT SYSDATE
 );
 
@@ -34,15 +34,30 @@ SELECT * FROM author_tbl;
 
 
 
+CREATE SEQUENCE pub_seq
+	START WITH 1
+	INCREMENT BY 1;
+CREATE SEQUENCE auth_seq
+	START WITH 10
+	INCREMENT BY 10;
 
-CREATE SEQUENCE literature
-	MINVALUE 1 MAXVALUE 100;
-CREATE SEQUENCE novel
-	MINVALUE 101 MAXVALUE 200;
-CREATE SEQUENCE sciencefiction
-	MINVALUE 201 MAXVALUE 300;
-CREATE SEQUENCE history
-	MINVALUE 301 MAXVALUE 400;
+SELECT * FROM user_sequences;
 
-SELECT * FROM user_SEQUENCEs;
+--11.21.------------------------------------------------------------------------------------
 
+-- book_tbl 고유번호, pub_tbl의 출판사코드, author_tbl의 작가코드를 primary key 또는 unique로 설정
+ALTER TABLE book_tbl ADD CONSTRAINT book_pk_isbn PRIMARY KEY(isbn);
+ALTER TABLE pub_tbl ADD CONSTRAINT pub_pk_pubcode PRIMARY KEY(pub_code);
+ALTER TABLE author_tbl ADD CONSTRAINT author_pk_authorcode PRIMARY KEY(author_code);
+
+-- book_tbl의 pub_code와 author_code가 pub_tbl의 출판사코드, author_tbl의 작가코드를 참조
+ALTER TABLE book_tbl ADD CONSTRAINT book_fk_pubcode
+FOREIGN KEY(pub_code) REFERENCES pub_tbl(pub_code);
+ALTER TABLE book_tbl ADD CONSTRAINT book_fk_authorcode
+FOREIGN KEY(author_code) REFERENCES author_tbl(author_code);
+
+DROP TABLE book_tbl;
+DROP TABLE pub_tbl;
+DROP TABLE author_tbl;
+
+SELECT * from tab;
