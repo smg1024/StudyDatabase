@@ -24,20 +24,20 @@ VALUES (pub_seq.nextval, '1-800-223-2336', 'SSPublicity@simonandschuster.com', '
 
 -- 책 6권 등록
 INSERT INTO book_tbl
-VALUES (9780552141123, 'Les Fourmis', 14.14, 'novel', TO_DATE('1991/2/2', 'yyyy/mm/dd'), 306, 2, 10, SYSDATE);
+VALUES (9780552141123, 'Les Fourmis', 14.14, 'novel', TO_DATE('1991/2/2', 'yyyy/mm/dd'), 306, 10, 2, SYSDATE);
 INSERT INTO book_tbl
-VALUES (9782286004231, 'Les Thanatonautes', 16.84, 'novel', TO_DATE('1994/1/1', 'yyyy/mm/dd'), 589, 2, 10, SYSDATE);
+VALUES (9782286004231, 'Les Thanatonautes', 16.84, 'novel', TO_DATE('1994/1/1', 'yyyy/mm/dd'), 589, 10, 2, SYSDATE);
 INSERT INTO book_tbl
-VALUES (9784062035156, 'Norwegian Wood', 34.17, 'literary fiction', TO_DATE('1987/9/1', 'yyyy/mm/dd'), 494, 1, 20, SYSDATE);
+VALUES (9784062035156, 'Norwegian Wood', 34.17, 'literary fiction', TO_DATE('1987/9/1', 'yyyy/mm/dd'), 494, 20, 1, SYSDATE);
 INSERT INTO book_tbl
-VALUES (9780099494096, 'Kafka on the Shore', 14.85, 'magical realism', TO_DATE('2002/9/12', 'yyyy/mm/dd'), 505, 1, 20, SYSDATE);
+VALUES (9780099494096, 'Kafka on the Shore', 14.85, 'magical realism', TO_DATE('2002/9/12', 'yyyy/mm/dd'), 505, 20, 1, SYSDATE);
 INSERT INTO book_tbl
-VALUES (9780385504201, 'The Da Vinci Code', 15.47, 'detective fiction', TO_DATE('2003/4/1', 'yyyy/mm/dd'), 689, 3, 30, SYSDATE);
+VALUES (9780385504201, 'The Da Vinci Code', 15.47, 'detective fiction', TO_DATE('2003/4/1', 'yyyy/mm/dd'), 689, 30, 3, SYSDATE);
 INSERT INTO book_tbl
-VALUES (9780385537858, 'Inferno', 26.90, 'conspiracy fiction', TO_DATE('2013/5/14', 'yyyy/mm/dd'), 624, 3, 30, SYSDATE);
+VALUES (9780385537858, 'Inferno', 26.90, 'conspiracy fiction', TO_DATE('2013/5/14', 'yyyy/mm/dd'), 624, 30, 3, SYSDATE);
 
 
-DELETE FROM book_tbl WHERE 1=1;
+DELETE FROM author_tbl WHERE 1=1;
 
 SELECT * FROM book_tbl;
 SELECT * FROM pub_tbl;

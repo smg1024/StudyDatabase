@@ -61,7 +61,7 @@ SELECT empno, ename, sal FROM emp
 WHERE sal > (SELECT sal FROM emp WHERE deptno=10); --ERROR:서브쿼리가 하나 이상의 값을 출력
 
 -- [문제] 부서별 최고 급여와 같은 급여를 받는 사원을 선택하라
-SELECT empno, ename, job, sal FROM emp
+SELECT empno, ename, job, sal, deptno FROM emp
 WHERE sal IN (SELECT MAX(sal) FROM emp group by deptno);
 
 -- [문제] 업무별로 최대 급여를 받는 사원의 사번, 이름, 업무, 금여를 출력하라
@@ -73,14 +73,14 @@ SELECT sal FROM emp WHERE job = 'SALESMAN';
 
 -- 업무가 'SALESMAN'인 사원의 최소급여보다
 -- 많으면서 부서번호가 20번이 아닌 사원의 이름과 급여, 부서코드를 출력하라.
-SELECT ename, sal, deptno FROM emp
-WHERE sal > any(SELECT sal FROM emp WHERE job='SALESMAN')
+SELECT ename, job, sal, deptno FROM emp
+WHERE sal > ANY (SELECT sal FROM emp WHERE job='SALESMAN')
 and deptno != 20;
 
 -- [문제] 사원테이블의 사원중 KING속한 부서의 사원보다 늦게 입사한 사원의 
 -- 사원명, 업무, 급여, 입사일을 선택하라.
 SELECT ename, job, sal, hiredate FROM emp
-WHERE hiredate > any(SELECT hiredate FROM emp 
+WHERE hiredate > ANY (SELECT hiredate FROM emp 
 WHERE deptno = (SELECT deptno FROM emp WHERE ename='KING'));
 
 -- ALL -> 모든 조건을 만족해야 선택
@@ -107,12 +107,12 @@ WHERE sal IN (SELECT sal FROM emp WHERE deptno = 30 AND comm is NOT NULL)
 AND comm IN (SELECT comm FROM emp WHERE deptno = 30 AND comm is NOT NULL);
 
 SELECT ename, deptno, sal, comm FROM emp
-WHERE
-(sal, comm) IN (SELECT sal, comm FROM emp WHERE deptno = 30 AND comm IS NOT NULL);
+WHERE (sal, comm)
+IN (SELECT sal, comm FROM emp WHERE deptno = 30 AND comm IS NOT NULL);
 
 -- [문제] 업무별로 최소 급여를 받는 사원의 사번, 이름, 업무, 부서번호를 출력하세요.
 -- 단, 업무별로 정렬하세요.
-SELECT empno, ename, job, sal FROM emp e
+SELECT empno, ename, job, deptno, sal FROM emp e
 WHERE (sal, job) IN (SELECT MIN(sal), job FROM emp GROUP BY job)
 ORDER BY job;
 

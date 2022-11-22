@@ -14,7 +14,6 @@ ALTER TABLE emp MODIFY(ename CONSTRAINT emp_nn_ename NOT NULL);
 ALTER TABLE emp
 ADD CONSTRAINT emp_uniq_deptno UNIQUE(deptno);	-- ERROR : deptno는 이미 중복되는 값이 존재함
 -- 기존의 데이터를 포용하는 제약조건으로 설정해야한다
-
 SELECT * FROM dept;
 ALTER TABLE dept
 ADD CONSTRAINT dept_uniq_deptno UNIQUE(deptno);

@@ -41,8 +41,8 @@ CREATE SEQUENCE auth_seq
 	START WITH 10
 	INCREMENT BY 10;
 
-DROP SEQUENCE pub_seq;
-
+DROP SEQUENCE auth_seq;
+SELECT * FROM user_constraints WHERE table_name='BOOK_TBL';
 SELECT * FROM user_sequences;
 
 --11.21.------------------------------------------------------------------------------------
@@ -61,5 +61,5 @@ FOREIGN KEY(author_code) REFERENCES author_tbl(author_code);
 DROP TABLE book_tbl;
 DROP TABLE pub_tbl;
 DROP TABLE author_tbl;
-
+purge recyclebin;
 SELECT * from tab;
