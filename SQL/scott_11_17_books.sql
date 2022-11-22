@@ -12,7 +12,7 @@ CREATE TABLE book_tbl(
 
 CREATE TABLE pub_tbl(
 	pub_code NUMBER(5) PRIMARY KEY,
-	pub_tel NUMBER(11),
+	pub_tel VARCHAR2(15),
 	pub_email VARCHAR2(50),
 	pub_rep VARCHAR2(30),
 	publisher VARCHAR2(30) NOT NULL,
@@ -40,6 +40,8 @@ CREATE SEQUENCE pub_seq
 CREATE SEQUENCE auth_seq
 	START WITH 10
 	INCREMENT BY 10;
+
+DROP SEQUENCE pub_seq;
 
 SELECT * FROM user_sequences;
 
