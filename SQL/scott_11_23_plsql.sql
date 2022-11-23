@@ -52,12 +52,11 @@ CALL emp_list(7839);
 CREATE OR REPLACE PROCEDURE emp_insert(i_empno emp.empno%TYPE, i_ename emp.ename%TYPE, i_deptno emp.deptno%TYPE)
 IS 
 BEGIN 
-	INSERT INTO emp(empno, ename, deptno)
-	VALUES (i_empno, i_ename, i_deptno);
+	INSERT INTO emp(empno, ename, deptno) VALUES (i_empno, i_ename, i_deptno);
 	dbms_output.put_line(i_ename || '사원이 등록되었습니다.');
 END;
 
 CALL emp_insert(5656, 'ZZZZ', 40);
-
+DELETE FROM emp WHERE empno=5656;
 
 

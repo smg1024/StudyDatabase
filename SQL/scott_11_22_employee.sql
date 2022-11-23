@@ -115,7 +115,7 @@ SELECT
 	e.ename, e.sal, s.grade
 FROM emp e
 	JOIN salgrade s ON e.sal BETWEEN s.losal AND s.hisal;
-
+SELECT * FROM salgrade;
 -- [문제] 10번과 20번 부서의 사원 중 사원명, 담당업무, 급여, 부서명, 부서위치, 호봉을 선택하라
 SELECT 
 	e.ename name, e.job, e.sal,
@@ -143,7 +143,7 @@ SELECT
 	e1.empno, e1.ename, e1.job, e1.mgr,
 	e2.empno, e2.ename, e2.job
 FROM emp e1
-	JOIN emp e2 ON e1.mgr=e2.empno;
+	FULL JOIN emp e2 ON e1.mgr=e2.empno;
 
 -- [문제] emp테이블에서 "누구의 관리자는 누구이다"는 내용을 출력하라
 -- LITERAL 문자열 사용
