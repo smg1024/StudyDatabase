@@ -209,7 +209,7 @@ FROM emp e
 	WHERE e.comm>0;
 
 -- [문제4] emp테이블에서 e이름 중 L자가 있는 사원에 대해 e이름, e업무, d부서명, d위치를 출력하는 문장을 작성하세요.
-SELECT 
+SELECT 	
 	e.ename, e.job, d.dname, d.loc
 FROM emp e
 	JOIN dept d ON e.deptno=d.deptno

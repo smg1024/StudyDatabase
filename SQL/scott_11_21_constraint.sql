@@ -48,7 +48,7 @@ ALTER TABLE emp MODIFY(hiredate DATE DEFAULT SYSDATE);
 -- FOFEIGN KEY와 PRIMARY KEY는 데이터형이 일치해야하고, 외래키에 의해 참조되고 있는 기본키는 삭제할 수 없다
 -- ON DELETE CASCADE를 이용하면 기본키를 삭제할때, 해당 기본키를 참조하고있는 외래키 레코드도 같이 삭제한다
 ALTER TABLE emp ADD CONSTRAINT emp_fk_deptno
-FOREIGN KEY(deptno) REFERENCES dept(deptno) 
+FOREIGN KEY(deptno) REFERENCES dept(deptno);
 
 ALTER TABLE emp DROP CONSTRAINT emp_fk_deptno;
 

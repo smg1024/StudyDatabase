@@ -37,7 +37,20 @@ INSERT INTO book_tbl
 VALUES (9780385537858, 'Inferno', 26.90, 'conspiracy fiction', TO_DATE('2013/5/14', 'yyyy/mm/dd'), 624, 30, 3, SYSDATE);
 
 
-DELETE FROM author_tbl WHERE 1=1;
+-- [문제1] 테이블 2개로 조인문제 만들어 풀기
+SELECT
+	b.title, a.author, b.genre, a.author_email, b.price Ω
+FROM book_tbl b
+	JOIN author_tbl a ON b.author_code=a.author_code;
+
+-- [문제2] 테이블 3개로 조인문제 만들어 풀기
+SELECT 
+	b.title, b.genre, a.author, a.author_email, p.publisher, p.pub_email, b.price
+FROM book_tbl b
+	JOIN author_tbl a ON b.author_code=a.author_code
+	JOIN pub_tbl p ON b.pub_code=p.pub_code;
+
+
 
 SELECT * FROM book_tbl;
 SELECT * FROM pub_tbl;
