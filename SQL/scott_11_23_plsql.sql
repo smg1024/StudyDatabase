@@ -45,6 +45,8 @@ END;
 
 SELECT * FROM user_source;
 
+
+
 CALL emp_list(7839);
 
 -- 사원 등록하는 프로시져 만들기
