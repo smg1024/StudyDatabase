@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 25.331-b09 (Oracle Corporation)
+Implementation-Vendor: Oracle Corporation
+Implementation-Title: JDBC
+Implementation-Version: 21.6.0.0.0
+Repository-Id: JAVAVM_21.0.0.0.0DBRU_LINUX.X64_220531
+Specification-Vendor: Sun Microsystems Inc.
+Specification-Title: JDBC
+Specification-Version: 4.3
+Main-Class: oracle.jdbc.OracleDriver
+Automatic-Module-Name: com.oracle.database.jdbc
+sealed: true
+Class-Path: oraclepki.jar
+
+Name: oracle/sql/
+Sealed: false
+
+Name: oracle/sql/converter/
+Sealed: false
+
+Name: oracle/jdbc/logging/annotations/
+Sealed: false
+
+Name: oracle/sql/converter_xcharset/
+Sealed: false
+
