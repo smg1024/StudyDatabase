@@ -18,6 +18,9 @@ FROM board_tbl ORDER BY postno DESC;
 
 UPDATE board_tbl SET subject=?, content=? WHERE postno=?;
 
+DELETE FROM board_tbl WHERE postno=?;
+
+SELECT username, name FROM member_tbl WHERE username=? AND password=?;
 
 SELECT * FROM user_sequences;
 SELECT * FROM member_tbl;
