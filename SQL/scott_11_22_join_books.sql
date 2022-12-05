@@ -39,7 +39,7 @@ VALUES (9780385537858, 'Inferno', 26.90, 'conspiracy fiction', TO_DATE('2013/5/1
 
 -- [문제1] 테이블 2개로 조인문제 만들어 풀기
 SELECT
-	b.title, a.author, b.genre, a.author_email, b.price Ω
+	b.title, a.author, b.genre, a.author_email, b.price
 FROM book_tbl b
 	JOIN author_tbl a ON b.author_code=a.author_code;
 
