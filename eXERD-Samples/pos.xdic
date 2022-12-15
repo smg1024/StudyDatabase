@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tm:TermDictionary xmlns:tm="http://exerd.com/term-model" version="1.1">
+  <term name="Employee" description="a person working for another person or a business firm for pay." physicalName="EMP" physicalDescription="EMPLOYEE"/>
+  <term name="Password" description="a secret word or expression used by authorized persons to prove their right to access, information, etc." physicalName="PWD" physicalDescription="PASSWORD">
+    <synonyms>PW</synonyms>
+  </term>
+  <term name="Name" description="an appellation, title, or epithet, applied descriptively, in honor, abuse, etc." physicalName="NAME" physicalDescription="NAME"/>
+  <term name="Index" description="a sequential arrangement of material, especially in alphabetical or numerical order." physicalName="IDX" physicalDescription="INDEX">
+    <synonyms>Sequence</synonyms>
+  </term>
+  <term name="Purchase" description="to acquire by the payment of money or its equivalent; buy." physicalName="PURCHASE" physicalDescription="PURCHASE">
+    <synonyms>Buy</synonyms>
+  </term>
+  <term name="Date" description="the period of light between sunrise and sunset, as distinguished from the night." physicalName="DATE" physicalDescription="DATE">
+    <synonyms>Day</synonyms>
+    <synonyms>Today</synonyms>
+  </term>
+  <term name="Supplier" description="supplier" physicalName="SUPPLIER" physicalDescription="SUPPLIER"/>
+  <term name="Price" description="the sum or amount of money or its equivalent for which anything is bought, sold, or offered for sale." physicalName="PRICE" physicalDescription="PRICE">
+    <synonyms>Charge</synonyms>
+    <synonyms>cost</synonyms>
+  </term>
+  <term name="Barcode" description="a series of lines of varying width, printed, as on a container or product, that can be read by an optical scanner to determine charges for purchases, destinations for letters, etc." physicalName="BARCODE" physicalDescription="BARCODE"/>
+  <term name="Type" description="a number of things or persons sharing a particular characteristic, or set of characteristics, that causes them to be regarded as a group, more or less precisely defined or designated; class; category: a criminal of the most vicious type." physicalName="TYPE" physicalDescription="TYPE"/>
+  <term name="Quantity" description="a specified or definite amount, weight, number, etc" physicalName="QTY" physicalDescription="QUANTITY"/>
+  <term name="VAT" description="value-added tax." physicalName="VAT" physicalDescription="VALUE ADDED TAX"/>
+  <term name="Page" description="a single sheet of paper for writing." physicalName="PAGE" physicalDescription="PAGE"/>
+  <term name="Release" description="the releasing of something for publication, performance, use, exhibition, or sale." physicalName="RELEASE" physicalDescription="RELEASE"/>
+  <term name="Order" description="an authoritative direction or instruction; command; mandate." physicalName="ORDER" physicalDescription="ORDER"/>
+  <term name="Registration Date" description="input date" physicalName="REG_DATE" physicalDescription="REGISTER DATE"/>
+  <term name="Discount" description="to deduct a certain amount from (a bill, charge, etc.): All bills that are paid promptly will be discounted at two percent." physicalName="DC" physicalDescription="DISCOUNT"/>
+  <term name="Sale" description="the act of selling." physicalName="SALE" physicalDescription="SALE"/>
+  <term name="Stock" description="a supply of goods kept on hand for sale to customers by a merchant, distributor, manufacturer, etc.; inventory." physicalName="STOCK" physicalDescription="STOCK"/>
+  <term name="Standard Size" description="product standard size" physicalName="STANDARD_SIZE" physicalDescription="STANDARD SIZE"/>
+  <term name="Stocktaking Day" description="Stocktaking days" physicalName="STOCK_DATE" physicalDescription="STOCK DATE"/>
+  <term name="ID" description="a means of identification, as a card or bracelet containing official or approved identification information." physicalName="ID" physicalDescription="ID">
+    <synonyms>Identification</synonyms>
+  </term>
+  <term name="Count" description="to check over (the separate units or groups of a collection) one by one to determine the total number; add up; enumerate: He counted his tickets and found he had ten." physicalName="COUNT" physicalDescription="COUNT"/>
+</tm:TermDictionary>
